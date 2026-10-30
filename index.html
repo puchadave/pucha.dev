@@ -1,119 +1,62 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0d">
-  <meta name="description" content="PUCHA|DEV unterstützt bei digitaler Sicherheit, OSINT-Recherche, strukturierter Beweissicherung und Prävention bei Cyberstalking.">
-  <title>PUCHA|DEV — Digitale Sicherheit. Klare Beweise.</title>
-  <style>
-    :root{color-scheme:dark;--bg:#0a0a0d;--panel:#111116;--text:#f4f4f6;--muted:#a8a8b3;--red:#ff1b2d;--line:#292932;--max:1120px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    a{color:inherit} .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,10,13,.9);backdrop-filter:blur(12px);z-index:5}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}.brand{font-weight:900;letter-spacing:.04em;font-size:1.3rem;text-decoration:none}.brand span{color:var(--red)}
-    nav .links{display:flex;gap:22px;flex-wrap:wrap}nav .links a{color:var(--muted);font-size:.92rem;text-decoration:none}nav .links a:hover{color:white}
-    .hero{padding:100px 0 88px;background:radial-gradient(ellipse at 80% 15%,rgba(255,27,45,.13),transparent 40%),linear-gradient(135deg,#0a0a0d 55%,#121218)}
-    .eyebrow{color:var(--red);text-transform:uppercase;font-size:.78rem;font-weight:800;letter-spacing:.18em}
-    h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.055em;max-width:900px;margin:18px 0 24px}h1 em{font-style:normal;color:var(--red)}
-    .lead{max-width:720px;color:#c8c8d0;font-size:1.2rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-    .button{display:inline-flex;padding:12px 18px;border:1px solid var(--red);background:var(--red);color:#fff;text-decoration:none;font-weight:750;border-radius:5px}.button.secondary{background:transparent;border-color:#454550}
-    section{padding:76px 0}section.alt{background:#0e0e13;border-block:1px solid var(--line)}.section-head{max-width:700px;margin-bottom:30px}h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.035em;line-height:1.1;margin:8px 0 14px}p{margin:0 0 14px}.muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:8px}.card .num{color:var(--red);font-weight:900;letter-spacing:.08em;font-size:.85rem}.card h3{margin:10px 0;font-size:1.2rem}.card p{color:var(--muted);font-size:.96rem}
-    .videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.video-card{min-width:0;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:8px}.video-card h3{font-size:1.1rem;line-height:1.35;margin:4px 0 14px}.video-card video{display:block;width:100%;aspect-ratio:16/9;background:#000;border-radius:5px}.video-card p{margin:12px 0 0;color:var(--muted);font-size:.92rem}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start}.list{padding:0;list-style:none}.list li{padding:12px 0;border-bottom:1px solid var(--line)}.list li:before{content:"/";color:var(--red);font-weight:900;margin-right:12px}
-    .notice{border-left:3px solid var(--red);padding:16px 20px;background:#121217;color:#c8c8d0}.contactbox{padding:30px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(140deg,#15151c,#0d0d11)}
-    footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:#ddd}
-    @media(max-width:760px){nav{align-items:flex-start;padding:18px 0;flex-direction:column}.grid,.split,.videos{grid-template-columns:1fr}.hero{padding:72px 0 62px}section{padding:58px 0}.wrap{width:min(var(--max),calc(100% - 30px))}}
-  .urgent-contact{position:fixed;z-index:1000;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px max(18px,calc((100vw - 1120px)/2));background:#ff1b2d;color:#fff;box-shadow:0 -5px 24px rgba(0,0,0,.38);font:600 15px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif}.urgent-contact span{display:flex;flex-direction:column;gap:3px}.urgent-contact small{font-size:11px;font-weight:500;opacity:.95}.urgent-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.urgent-contact a{color:#fff;font-weight:900;white-space:nowrap;text-decoration:none;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:9px 12px}.urgent-contact a.whatsapp{background:#128c4a;border-color:#128c4a}.urgent-contact a.facebook{background:#1877f2;border-color:#1877f2}.urgent-contact a:focus-visible{outline:3px solid #fff;outline-offset:3px}body{padding-bottom:78px}@media(max-width:520px){.urgent-contact{padding:10px 12px;gap:8px}.urgent-contact small{font-size:10px}.urgent-contact a{font-size:13px;padding:9px 9px}.urgent-actions{gap:6px}}
-    .insurance-card{padding:30px;border:1px solid #3a2529;border-left:4px solid var(--red);border-radius:8px;background:radial-gradient(ellipse at 100% 0,rgba(255,27,45,.12),transparent 48%),var(--panel)}.insurance-card h3{font-size:1.35rem;margin:8px 0 12px}.insurance-card p{color:#c8c8d0}.insurance-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}.insurance-points div{padding:15px;background:#0b0b10;border:1px solid var(--line);border-radius:6px}.insurance-points strong{display:block;color:#fff;margin-bottom:5px}.insurance-points span{font-size:.92rem;color:var(--muted)}@media(max-width:760px){.insurance-points{grid-template-columns:1fr}}
-
-/* Cookie-Info: rein informativ, da derzeit keine einwilligungspflichtigen Cookies eingesetzt werden */
-.cookie-info{position:fixed;z-index:1100;left:50%;bottom:calc(82px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(900px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 16px;background:#17171d;color:#f4f4f6;border:1px solid #555560;border-left:4px solid #ff1b2d;border-radius:9px;box-shadow:0 8px 32px rgba(0,0,0,.48);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
-.cookie-info p{margin:0;flex:1}.cookie-info a{color:#ff8790;text-decoration:underline}.cookie-info button{flex-shrink:0;background:#ff1b2d;color:#fff;border:0;border-radius:5px;padding:9px 14px;font:700 13px system-ui;cursor:pointer}.cookie-info button:focus-visible{outline:3px solid #fff;outline-offset:3px}
-@media(max-width:620px){.cookie-info{bottom:calc(88px + env(safe-area-inset-bottom));align-items:flex-start;gap:10px;padding:11px 12px;font-size:12px}.cookie-info button{padding:8px 10px;font-size:12px}}
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0a0d">
+<meta name="description" content="PUCHA|DEV von David Puchalla: verständliche Unterstützung bei digitaler Recherche, Beweissicherung, Cyberstalking-Prävention, IT-Beratung und Sicherheitskursen.">
+<meta property="og:title" content="PUCHA|DEV | Digitale Sicherheit verständlich gemacht">
+<meta property="og:description" content="Digitale Recherche, Beweissicherung, Prävention und IT-Beratung für Privatpersonen und Unternehmen.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pucha.dev/">
+<title>PUCHA|DEV | Digitale Sicherheit & Recherche</title>
+<style>
+:root{color-scheme:dark;--bg:#0a0a0d;--panel:#121218;--text:#f4f4f6;--muted:#b4b4bf;--red:#ff1b2d;--line:#303039;--max:1060px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(10,10,13,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.brand{font-size:1.3rem;font-weight:950;letter-spacing:.05em;text-decoration:none}.brand span,.eyebrow{color:var(--red)}.navlinks{display:flex;gap:22px;flex-wrap:wrap}.navlinks a{color:var(--muted);font-size:.94rem;text-decoration:none}.navlinks a:hover{color:#fff}
+.hero{padding:86px 0 76px;background:radial-gradient(ellipse at 80% 10%,rgba(255,27,45,.14),transparent 43%),linear-gradient(135deg,#0a0a0d 55%,#121218)}.eyebrow{text-transform:uppercase;font-size:.78rem;font-weight:850;letter-spacing:.18em}h1{font-size:clamp(2.7rem,7vw,5.3rem);line-height:1.02;letter-spacing:-.055em;max-width:850px;margin:15px 0 22px}h1 em{font-style:normal;color:var(--red)}.lead{max-width:760px;color:#d0d0d7;font-size:1.18rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.button{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border:1px solid var(--red);border-radius:5px;background:var(--red);color:#fff;text-decoration:none;font-weight:800}.button.secondary{background:transparent;border-color:#555560}
+section{padding:62px 0}.alt{background:#0e0e13;border-block:1px solid var(--line)}h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.12;letter-spacing:-.035em;margin:8px 0 14px}.section-head{max-width:720px;margin-bottom:28px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:8px}.card h3{margin:7px 0 8px;font-size:1.12rem}.card p{margin:0;color:var(--muted)}.num{font-size:.76rem;color:var(--red);font-weight:900;letter-spacing:.14em}.about{max-width:780px;color:#d0d0d7}.contactbox{padding:25px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(140deg,#15151c,#0d0d11)}.contactbox p{margin:8px 0}.contactbox a{color:#ff7a84}footer{padding:25px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}footer a{color:#ddd}
+.urgent-contact{position:fixed;z-index:1000;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px max(18px,calc((100vw - 1120px)/2));background:#ff1b2d;color:#fff;box-shadow:0 -5px 24px rgba(0,0,0,.38);font:600 15px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif}.urgent-contact span{display:flex;flex-direction:column;gap:3px}.urgent-contact small{font-size:11px;font-weight:500;opacity:.95}.urgent-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.urgent-contact a{color:#fff;font-weight:900;white-space:nowrap;text-decoration:none;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:9px 12px}.urgent-contact a.whatsapp{background:#128c4a;border-color:#128c4a}.urgent-contact a.facebook{background:#1877f2;border-color:#1877f2}body{padding-bottom:82px}
+.cookie-info{position:fixed;z-index:1100;left:50%;bottom:calc(82px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(900px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 16px;background:#17171d;color:#f4f4f6;border:1px solid #555560;border-left:4px solid var(--red);border-radius:9px;box-shadow:0 8px 32px rgba(0,0,0,.48);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}.cookie-info p{margin:0;flex:1}.cookie-info a{color:#ff8790;text-decoration:underline}.cookie-info button{flex-shrink:0;background:var(--red);color:#fff;border:0;border-radius:5px;padding:9px 14px;font:700 13px system-ui;cursor:pointer}.cookie-info button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:700px){nav{padding:15px 0;align-items:flex-start;flex-direction:column}.navlinks{gap:14px}.grid{grid-template-columns:1fr}.hero{padding:62px 0 54px}section{padding:48px 0}.urgent-contact{padding:10px 12px;gap:7px}.urgent-contact small{font-size:10px}.urgent-contact a{font-size:12px;padding:8px 7px}.urgent-actions{gap:5px}.cookie-info{bottom:calc(88px + env(safe-area-inset-bottom));align-items:flex-start;gap:10px;padding:11px 12px;font-size:12px}.cookie-info button{padding:8px 10px;font-size:12px}}
 </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Hauptnavigation">
-  <a class="brand" href="#start">PUCHA<span>|</span>DEV</a>
-  <div class="links"><a href="strategie.html">Strategie</a><a href="#leistungen">Leistungen</a><a href="#videos">Videos</a><a href="cyberversicherung.html">Cyberversicherung</a><a href="#ablauf">Arbeitsweise</a><a href="#kontakt">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+<a class="brand" href="#start">PUCHA<span>|</span>DEV</a>
+<div class="navlinks"><a href="#leistungen">Leistungen</a><a href="cyberversicherung.html">Ratgeber</a><a href="#ueber-mich">Über mich</a><a href="#kontakt">Kontakt</a></div>
 </nav></header>
 <main>
-  <section class="hero" id="start"><div class="wrap">
-    <div class="eyebrow">Digitale Sicherheit · Recherche · Prävention</div>
-    <h1>Digitale Spuren verstehen.<br><em>Handlungsfähig</em> bleiben.</h1>
-    <p class="lead">PUCHA|DEV unterstützt Privatpersonen und Organisationen bei digitaler Sicherheit, OSINT-Recherche, strukturierter Beweissicherung und Prävention bei Cyberstalking und digitaler Belästigung.</p>
-    <div class="actions"><a class="button" href="#kontakt">Anfrage stellen</a><a class="button secondary" href="#leistungen">Leistungen ansehen</a></div>
-  </div></section>
-  <section class="alt" id="videos"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">PUCHA|DEV in bewegten Bildern</div><h2>Aufklärung. Schutz. Handlungssicherheit.</h2><p class="muted">Zwei Kurzvideos stellen die Themen digitale Sicherheit, Cyberstalking und Beweissicherung vor.</p></div>
-    <div class="videos">
-      <article class="video-card"><h3>Dein Schutz. Deine Stimme. Deine Sicherheit.</h3><video controls preload="metadata" playsinline aria-label="PUCHA DEV – Dein Schutz. Deine Stimme. Deine Sicherheit."><source src="assets/videos/PUCHA_DEV%20%E2%80%93%20Dein%20Schutz.%20Deine%20Stimme.%20Deine%20Sicherheit._720p_caption.mp4" type="video/mp4">Dein Browser unterstützt das Videoelement nicht. <a href="assets/videos/PUCHA_DEV%20%E2%80%93%20Dein%20Schutz.%20Deine%20Stimme.%20Deine%20Sicherheit._720p_caption.mp4">Video öffnen</a>.</video><p>Digitale Sicherheit und Prävention verständlich erklärt.</p></article>
-      <article class="video-card"><h3>Cyberstalking: Aufklärung & Beweissicherung</h3><video controls preload="metadata" playsinline aria-label="PUCHA DEV – Cyberstalking Aufklärung und Beweissicherung"><source src="assets/videos/Pucha_Dev%20%E2%80%93%20Cyberstalking%20Aufkl%C3%A4rung%20%26%20Beweissicherung_720p_caption.mp4" type="video/mp4">Dein Browser unterstützt das Videoelement nicht. <a href="assets/videos/Pucha_Dev%20%E2%80%93%20Cyberstalking%20Aufkl%C3%A4rung%20%26%20Beweissicherung_720p_caption.mp4">Video öffnen</a>.</video><p>Hinweise zum Umgang mit digitaler Belästigung und zur strukturierten Dokumentation.</p></article>
-    </div>
-  </div></section>
-  <section id="leistungen"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Leistungsbereiche</div><h2>Technische Klarheit statt Aktionismus.</h2><p class="muted">Strukturiert, nachvollziehbar und mit Blick auf Datenschutz und sichere nächste Schritte.</p></div>
-    <div class="grid">
-      <article class="card"><div class="num">01 / RECHERCHE</div><h3>OSINT & digitale Recherche</h3><p>Auswertung öffentlich zugänglicher Informationen, Dokumentation relevanter Fundstellen und nachvollziehbare Rechercheberichte.</p></article>
-      <article class="card"><div class="num">02 / DOKUMENTATION</div><h3>Digitale Beweissicherung</h3><p>Unterstützung bei der geordneten Sicherung und Dokumentation digitaler Inhalte, Zeitlinien und Kontextinformationen.</p></article>
-      <article class="card"><div class="num">03 / PRÄVENTION</div><h3>Cyberstalking & Sicherheit</h3><p>Praktische Präventionsberatung zu Kontosicherheit, Privatsphäre, digitaler Angriffsfläche und einem strukturierten Vorgehen bei Vorfällen.</p></article>
-      <article class="card"><div class="num">04 / IT</div><h3>IT-Beratung</h3><p>Technische Analyse, Systemkonzepte und pragmatische Empfehlungen mit Fokus auf Sicherheit, Datenschutz und Wartbarkeit.</p></article>
-      <article class="card"><div class="num">05 / AWARENESS</div><h3>Präventionskurse</h3><p>Verständliche Sensibilisierung für digitale Risiken, sichere Online-Kommunikation und den Umgang mit verdächtigen Kontakten.</p></article>
-      <article class="card"><div class="num">06 / STRUKTUR</div><h3>Beratung & Einordnung</h3><p>Informationen ordnen, offene Fragen sichtbar machen und mögliche nächste Schritte sauber dokumentieren.</p></article>
-    </div>
-  </div></section>
-  <section class="alt" id="cyberversicherung"><div class="wrap">
-    <div class="eyebrow">In Planung · Digitale Absicherung</div>
-    <div class="insurance-card">
-      <h2>Digitale Risiken erkennen. Finanziellen Folgen besser begegnen.</h2>
-      <h3>Cyberversicherungen werden Teil des geplanten PUCHA|DEV-Angebots.</h3>
-      <p>Cyberangriffe, Datenverlust, Identitätsmissbrauch oder digitale Erpressung können Privatpersonen ebenso treffen wie Unternehmen und Selbstständige. Technische Prävention und ein klarer Notfallplan sind entscheidend. Doch manchmal bleibt trotz aller Vorsicht ein finanzielles Restrisiko.</p>
-      <p>Deshalb plant PUCHA|DEV, das Angebot künftig um Orientierung zu passenden Cyberversicherungen zu erweitern. Ziel ist, verständliche Informationen zu Versicherungsschutz, Leistungsumfang und möglichen Ausschlüssen bereitzustellen und Interessierte mit geeigneten Anbietern beziehungsweise Angeboten zusammenzuführen.</p>
-      <div class="insurance-points">
-        <div><strong>Risiken verstehen</strong><span>Welche digitalen Schäden und Vorfälle können abgesichert sein?</span></div>
-        <div><strong>Leistungen vergleichen</strong><span>Deckung, Selbstbeteiligung, Ausschlüsse und Meldepflichten nachvollziehen.</span></div>
-        <div><strong>Prävention verbinden</strong><span>Technische Schutzmaßnahmen und finanzielle Absicherung sinnvoll zusammendenken.</span></div>
-      </div>
-      <p style="margin-top:20px"><strong>Unser Anspruch:</strong> Nicht irgendeine Police vermitteln, sondern Orientierung schaffen, damit Schutzbedarf und Versicherungsumfang zusammenpassen.</p>
-      <p class="muted"><strong>Hinweis:</strong> Das Angebot befindet sich in Planung. Derzeit werden über PUCHA|DEV keine Versicherungsverträge vermittelt oder abgeschlossen. Konkrete Anbieter, Produkte und Konditionen werden erst nach Prüfung vorgestellt. Falls künftig eine provisionsbasierte Vermittlung oder Affiliate-Verlinkung erfolgt, wird dies transparent gekennzeichnet.</p><p><a class="button secondary" href="cyberversicherung.html">Cyberversicherungen: Leistungen, Familien- und Kinderschutz verstehen</a></p>
-    </div>
-  </div></section>
-  <section class="alt" id="ablauf"><div class="wrap split">
-    <div><div class="eyebrow">Arbeitsweise</div><h2>Nachvollziehbar. Vertraulich. Zweckorientiert.</h2><p class="muted">Jeder Fall ist anders. Deshalb beginnt die Arbeit mit einer klaren Eingrenzung des Ziels und der vorhandenen Informationen, nicht mit voreiligen Schlussfolgerungen.</p></div>
-    <ul class="list"><li><strong>Auftrag klären</strong><br><span class="muted">Ziel, Umfang und Grenzen festlegen.</span></li><li><strong>Informationen strukturieren</strong><br><span class="muted">Relevante Inhalte ordnen und Quellen nachvollziehbar dokumentieren.</span></li><li><strong>Risiken reduzieren</strong><br><span class="muted">Praktische Sicherheitsmaßnahmen priorisieren.</span></li><li><strong>Ergebnisse übergeben</strong><br><span class="muted">Klare Zusammenfassung mit dokumentierten Feststellungen und offenen Punkten.</span></li></ul>
-  </div></section>
-  <section><div class="wrap split">
-    <div><div class="eyebrow">Wichtiger Hinweis</div><h2>Saubere Grenzen gehören zur Sicherheit.</h2></div>
-    <div class="notice">Recherchen erfolgen im rechtlich zulässigen Rahmen und auf Basis verfügbarer Informationen. Das Angebot ersetzt keine anwaltliche Beratung, keine polizeiliche Gefahrenabwehr und keine Notfallhilfe. Bei akuter Gefahr bitte die Polizei unter <strong>110</strong> verständigen. Eine gerichtsfeste Verwertbarkeit von Beweismitteln kann nicht pauschal zugesichert werden.</div>
-  </div></section>
-  <section class="alt" id="kontakt"><div class="wrap split">
-    <div><div class="eyebrow">Kontakt</div><h2>Der nächste Schritt beginnt mit einer klaren Anfrage.</h2><p class="muted">Bitte übermittle in der ersten Nachricht keine Passwörter, Zugangsdaten oder unnötigen sensiblen Informationen. Eine kurze Beschreibung des Anliegens genügt zunächst.</p></div>
-    <div class="contactbox"><h3>PUCHA|DEV</h3><p>David Puchalla · Freiberufliche Tätigkeit</p><p><strong>Direkter Telefonkontakt:</strong> <a href="tel:+4915790428058">+49 1579 0428058</a><br><strong>Web:</strong> <a href="https://pucha.dev">pucha.dev</a></p><p class="muted">Für dringende Anliegen telefonisch erreichbar. Keine 24/7-Notruf- oder Einsatzstelle. Bei akuter Gefahr bitte 110 oder 112 wählen.</p><a class="button secondary" href="https://github.com/puchadave/pucha.dev">Projekt auf GitHub</a></div>
-  </div></section>
-  <section class="alt"><div class="wrap">
-    <div class="eyebrow">Transparenz</div><h2>Rechtliche Informationen</h2>
-    <div class="grid">
-      <article class="card"><h3>Impressum</h3><p>Angaben zum Diensteanbieter und Kontakt.</p><a href="impressum.html">Impressum öffnen →</a></article>
-      <article class="card"><h3>Datenschutzerklärung</h3><p>Informationen zur Verarbeitung personenbezogener Daten auf dieser Website.</p><a href="datenschutz.html">Datenschutz öffnen →</a></article>
-    </div>
-  </div></section>
+<section class="hero" id="start"><div class="wrap">
+<div class="eyebrow">Digitale Sicherheit · Recherche · Prävention</div>
+<h1>Digitale Probleme.<br><em>Klare Lösungen.</em></h1>
+<p class="lead">Ich bin David Puchalla. Mit PUCHA|DEV unterstütze ich Privatpersonen und Unternehmen dabei, digitale Risiken zu verstehen, Informationen zu prüfen und die richtigen nächsten Schritte einzuleiten.</p>
+<div class="actions"><a class="button" href="#kontakt">Kontakt aufnehmen</a><a class="button secondary" href="#leistungen">Leistungen ansehen</a></div>
+</div></section>
+<section id="leistungen"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Was ich anbiete</div><h2>Unterstützung, die verständlich bleibt.</h2><p class="muted">Keine unnötige Fachsprache. Ein klarer Blick auf das Problem und ein nachvollziehbarer nächster Schritt.</p></div>
+<div class="grid">
+<article class="card"><div class="num">01 · RECHERCHE</div><h3>Digitale Recherche (OSINT)</h3><p>Öffentlich verfügbare Informationen gezielt suchen, prüfen und verständlich zusammenfassen.</p></article>
+<article class="card"><div class="num">02 · BEWEISSICHERUNG</div><h3>Digitale Inhalte dokumentieren</h3><p>Beiträge, Nachrichten, Profile und Abläufe strukturiert festhalten, damit Zusammenhänge nachvollziehbar bleiben.</p></article>
+<article class="card"><div class="num">03 · CYBERSTALKING</div><h3>Schutz und Orientierung</h3><p>Bei digitaler Belästigung helfen, Risiken einzuordnen und sinnvolle Schutz- und Dokumentationsschritte zu planen.</p></article>
+<article class="card"><div class="num">04 · IT-BERATUNG</div><h3>Technik verständlich machen</h3><p>Unterstützung bei IT-Fragen, Systemen, digitalen Abläufen und grundlegenden Sicherheitsmaßnahmen.</p></article>
+<article class="card"><div class="num">05 · PRÄVENTION</div><h3>Kurse und Sensibilisierung</h3><p>Wissen zu Betrug, Datenschutz, sicheren Konten und verantwortungsvollem Verhalten im Internet vermitteln.</p></article>
+<article class="card"><div class="num">06 · BERATUNG</div><h3>Einordnung und nächste Schritte</h3><p>Informationen sortieren, Möglichkeiten erklären und einen praktikablen Weg nach vorn entwickeln.</p></article>
+</div>
+</div></section>
+<section class="alt" id="ueber-mich"><div class="wrap">
+<div class="eyebrow">Über mich</div><h2>David Puchalla · PUCHA|DEV</h2>
+<p class="about">Ich verbinde technisches Verständnis, strukturierte Recherche und einen klaren Blick für digitale Risiken. Mein Anspruch ist, komplizierte Sachverhalte so aufzubereiten, dass Menschen sie verstehen und fundierte Entscheidungen treffen können.</p>
+<p><a class="button secondary" href="strategie.html">Mehr über meinen Ansatz</a> <a class="button secondary" href="cyberversicherung.html">Zum Cyberversicherungs-Ratgeber</a></p>
+</div></section>
+<section id="kontakt"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Kontakt</div><h2>Ein Anliegen? Wir klären den nächsten Schritt.</h2><p class="muted">Beschreibe kurz, worum es geht. Bitte sende zunächst keine Passwörter, Zugangsdaten oder unnötigen sensiblen Informationen.</p></div>
+<div class="contactbox"><h3>PUCHA|DEV · David Puchalla</h3><p><strong>Telefon:</strong> <a href="tel:+4915790428058">+49 1579 0428058</a></p><p><strong>E-Mail:</strong> <a href="mailto:David.Puchalla@web.de">David.Puchalla@web.de</a></p><p><strong>WhatsApp:</strong> <a href="https://wa.me/4915790428058?text=Hallo%20David%2C%20ich%20habe%20eine%20Anfrage%20zu%20PUCHA%7CDEV." target="_blank" rel="noopener noreferrer">Nachricht senden</a></p><p class="muted">Keine Notruf- oder Einsatzstelle. Bei akuter Gefahr bitte 110 oder 112 wählen.</p></div>
+</div></section>
+<section class="alt"><div class="wrap"><div class="eyebrow">Rechtliches</div><p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p></div></section>
 </main>
-<footer><div class="wrap foot"><span>© <span id="year">2026</span> PUCHA|DEV</span><span>Digitale Sicherheit. Klare Beweise.</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></footer>
-<aside class="urgent-contact" aria-label="Direkter telefonischer Kontakt"><span><strong>PUCHA|DEV · Direktkontakt</strong><small>Keine amtliche Notrufstelle. Bei akuter Gefahr: 110 oder 112.</small></span><div class="urgent-actions"><a href="tel:+4915790428058">Anrufen</a><a class="whatsapp" href="https://wa.me/4915790428058?text=Hallo%20David%2C%20ich%20habe%20eine%20Anfrage%20zu%20PUCHA%7CDEV." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Nachricht an PUCHA DEV senden">WhatsApp</a><a class="facebook" href="https://www.facebook.com/pucha.dev" target="_blank" rel="noopener noreferrer" aria-label="Facebook-Seite von PUCHA DEV öffnen">Facebook</a></div></aside>
-
-<aside class="cookie-info" id="cookie-info" role="note" aria-label="Cookie-Information">
-  <p><strong>Cookie-Info:</strong> Diese Website verwendet nach aktuellem technischem Stand keine eigenen Cookies, Tracking- oder Analyse-Dienste und bindet keine externen Inhalte ein. Externe Dienste wie Facebook oder WhatsApp werden erst durch Anklicken eines Links aufgerufen. <a href="datenschutz.html#cookies">Weitere Informationen</a>.</p>
-  <button type="button" id="cookie-info-close" aria-label="Cookie-Hinweis schließen">Schließen</button>
-</aside>
-<script>
-(function(){
-  var closeButton=document.getElementById('cookie-info-close');
-  var notice=document.getElementById('cookie-info');
-  if(closeButton&&notice){closeButton.addEventListener('click',function(){notice.remove();});}
-})();
-</script>
-
+<footer><div class="wrap foot"><span>© 2026 PUCHA|DEV</span><span>Digitale Sicherheit. Klare Informationen. Praktische Schritte.</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></footer>
+<aside class="urgent-contact" aria-label="Direkter Kontakt"><span><strong>PUCHA|DEV · Direktkontakt</strong><small>Keine amtliche Notrufstelle. Bei akuter Gefahr: 110 oder 112.</small></span><div class="urgent-actions"><a href="tel:+4915790428058">Anrufen</a><a class="whatsapp" href="https://wa.me/4915790428058?text=Hallo%20David%2C%20ich%20habe%20eine%20Anfrage%20zu%20PUCHA%7CDEV." target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="facebook" href="https://www.facebook.com/pucha.dev" target="_blank" rel="noopener noreferrer">Facebook</a></div></aside>
+<aside class="cookie-info" id="cookie-info" role="note" aria-label="Cookie-Information"><p><strong>Cookie-Info:</strong> Diese Website verwendet nach aktuellem technischem Stand keine eigenen Cookies, Tracking- oder Analyse-Dienste. Externe Dienste werden erst durch Anklicken eines Links aufgerufen. <a href="datenschutz.html#cookies">Weitere Informationen</a>.</p><button type="button" id="cookie-info-close" aria-label="Cookie-Hinweis schließen">Schließen</button></aside>
+<script>(function(){var b=document.getElementById('cookie-info-close');var n=document.getElementById('cookie-info');if(b&&n){b.addEventListener('click',function(){n.remove();});}})();</script>
 </body></html>

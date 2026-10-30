@@ -6,6 +6,12 @@
 <style>
 :root{color-scheme:dark;--bg:#0a0a0d;--panel:#111116;--text:#f4f4f6;--muted:#b4b4bf;--red:#ff1b2d;--line:#292932}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:900px;width:calc(100% - 36px);margin:50px auto 80px}a{color:#ff6874}h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.1}h2{margin-top:2.2rem;font-size:1.45rem}p,li{color:#d0d0d8}.muted{color:var(--muted)}.brand{font-weight:900;letter-spacing:.04em;text-decoration:none;color:white}.brand span{color:var(--red)}.note{padding:16px;border-left:3px solid var(--red);background:var(--panel)}footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted)}nav{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:20px max(18px,calc((100vw - 900px)/2));border-bottom:1px solid var(--line)}
 .urgent-contact{position:fixed;z-index:1000;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px max(18px,calc((100vw - 1120px)/2));background:#ff1b2d;color:#fff;box-shadow:0 -5px 24px rgba(0,0,0,.38);font:600 15px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif}.urgent-contact span{display:flex;flex-direction:column;gap:3px}.urgent-contact small{font-size:11px;font-weight:500;opacity:.95}.urgent-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.urgent-contact a{color:#fff;font-weight:900;white-space:nowrap;text-decoration:none;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:9px 12px}.urgent-contact a.whatsapp{background:#128c4a;border-color:#128c4a}.urgent-contact a.facebook{background:#1877f2;border-color:#1877f2}.urgent-contact a:focus-visible{outline:3px solid #fff;outline-offset:3px}body{padding-bottom:78px}@media(max-width:520px){.urgent-contact{padding:10px 12px;gap:8px}.urgent-contact small{font-size:10px}.urgent-contact a{font-size:13px;padding:9px 9px}.urgent-actions{gap:6px}}
+
+/* Cookie-Info: rein informativ, da derzeit keine einwilligungspflichtigen Cookies eingesetzt werden */
+.cookie-info{position:fixed;z-index:1100;left:50%;bottom:calc(82px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(900px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 16px;background:#17171d;color:#f4f4f6;border:1px solid #555560;border-left:4px solid #ff1b2d;border-radius:9px;box-shadow:0 8px 32px rgba(0,0,0,.48);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.cookie-info p{margin:0;flex:1}.cookie-info a{color:#ff8790;text-decoration:underline}.cookie-info button{flex-shrink:0;background:#ff1b2d;color:#fff;border:0;border-radius:5px;padding:9px 14px;font:700 13px system-ui;cursor:pointer}.cookie-info button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:620px){.cookie-info{bottom:calc(88px + env(safe-area-inset-bottom));align-items:flex-start;gap:10px;padding:11px 12px;font-size:12px}.cookie-info button{padding:8px 10px;font-size:12px}}
+
 </style></head><body>
 <nav><a class="brand" href="index.html">PUCHA<span>|</span>DEV</a><a href="impressum.html">Impressum</a></nav>
 <main>
@@ -23,8 +29,11 @@
 <p>Empfänger der Verbindungsdaten ist der Hostinganbieter GitHub, Inc. Die Verarbeitung kann auch in Drittländern stattfinden. Maßgeblich sind die aktuellen Datenschutzinformationen und vertraglichen Regelungen von GitHub. Weitere Informationen: <a href="https://docs.github.com/en/pages">GitHub Pages Dokumentation</a> und <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Datenschutzerklärung</a>.</p>
 <p>Die konkrete Speicherdauer technischer Protokolle wird durch den Hostinganbieter bestimmt und ist von uns nicht unmittelbar steuerbar. Wir löschen oder speichern auf dieser Website selbst keine Serverprotokolle.</p>
 
-<h2>3. Cookies, Tracking und externe Inhalte</h2>
-<p>Nach der derzeitigen Konfiguration setzt diese Website keine eigenen Cookies und verwendet keine Analyse- oder Werbetracker. Es werden keine Karten, Videos, Social-Media-Feeds, externen Schriftarten oder sonstigen Inhalte von Drittanbietern eingebettet. Sollte die Website künftig entsprechende Funktionen erhalten, wird diese Erklärung aktualisiert und erforderliche Einwilligungen werden vorab eingeholt.</p>
+<h2 id="cookies">3. Cookies, Tracking und externe Inhalte</h2>
+<p>Nach Prüfung des aktuell im GitHub-Repository hinterlegten Quellcodes setzt diese Website selbst keine Cookies und verwendet weder Local Storage noch Session Storage, Analyse- oder Werbetracker, Tracking-Pixel oder Fingerprinting. Es werden keine Karten, externen Videos, Social-Media-Feeds, externen Schriftarten oder sonstigen Inhalte von Drittanbietern eingebettet. Die auf der Website vorhandenen Video-Dateien werden als lokale Website-Inhalte eingebunden.</p>
+<p>Die sichtbare Cookie-Info ist daher ein transparenter Hinweis und keine Einwilligungsabfrage. Derzeit werden keine einwilligungspflichtigen Cookies oder vergleichbaren Speicher- und Auslesetechnologien eingesetzt, für die eine Auswahl eingeholt werden müsste. § 25 TDDDG verlangt eine Einwilligung insbesondere dann, wenn Informationen auf dem Endgerät gespeichert oder ausgelesen werden und keine gesetzliche Ausnahme greift. Sollte PUCHA|DEV künftig Analyse-, Marketing- oder andere einwilligungspflichtige Dienste einsetzen, werden diese vor einer wirksamen Einwilligung technisch blockiert und die Datenschutzerklärung entsprechend aktualisiert.</p>
+<p>Links zu externen Anbietern, insbesondere Facebook und WhatsApp, sind einfache externe Links. Erst wenn du einen solchen Link anklickst, wird eine Verbindung zum jeweiligen Anbieter hergestellt. Für die anschließende Verarbeitung gelten die Datenschutzbestimmungen des jeweiligen Anbieters. Rechtsgrundlage für die von uns bereitgestellte Verlinkung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kommunikation und Information).</p>
+<p>Rechtsgrundlage: <a href="https://www.gesetze-im-internet.de/ttdsg/__25.html" target="_blank" rel="noopener noreferrer">§ 25 TDDDG</a>.</p>
 
 <h2>4. Kontaktaufnahme</h2>
 <p>Eine Kontaktaufnahme ist per E-Mail oder Telefon möglich. Wenn du per E-Mail schreibst, verarbeiten wir deine E-Mail-Adresse sowie die von dir übermittelten Inhalte und gegebenenfalls weitere Angaben, soweit dies zur Bearbeitung deiner Anfrage erforderlich ist. Bei einer Kontaktaufnahme per Telefon verarbeiten wir die dabei mitgeteilten Daten entsprechend.</p>
@@ -42,4 +51,17 @@
 <p>Diese Datenschutzerklärung wird angepasst, wenn sich die Website, eingesetzte Dienste oder rechtliche Anforderungen ändern.</p>
 <footer><a href="index.html">Startseite</a> · <a href="impressum.html">Impressum</a></footer>
 </main><aside class="urgent-contact" aria-label="Direkter telefonischer Kontakt"><span><strong>PUCHA|DEV · Direktkontakt</strong><small>Keine amtliche Notrufstelle. Bei akuter Gefahr: 110 oder 112.</small></span><div class="urgent-actions"><a href="tel:+4915790428058">Anrufen</a><a class="whatsapp" href="https://wa.me/4915790428058?text=Hallo%20David%2C%20ich%20habe%20eine%20Anfrage%20zu%20PUCHA%7CDEV." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Nachricht an PUCHA DEV senden">WhatsApp</a><a class="facebook" href="https://www.facebook.com/pucha.dev" target="_blank" rel="noopener noreferrer" aria-label="Facebook-Seite von PUCHA DEV öffnen">Facebook</a></div></aside>
+
+<aside class="cookie-info" id="cookie-info" role="note" aria-label="Cookie-Information">
+  <p><strong>Cookie-Info:</strong> Diese Website verwendet nach aktuellem technischem Stand keine eigenen Cookies, Tracking- oder Analyse-Dienste und bindet keine externen Inhalte ein. Externe Dienste wie Facebook oder WhatsApp werden erst durch Anklicken eines Links aufgerufen. <a href="datenschutz.html#cookies">Weitere Informationen</a>.</p>
+  <button type="button" id="cookie-info-close" aria-label="Cookie-Hinweis schließen">Schließen</button>
+</aside>
+<script>
+(function(){
+  var closeButton=document.getElementById('cookie-info-close');
+  var notice=document.getElementById('cookie-info');
+  if(closeButton&&notice){closeButton.addEventListener('click',function(){notice.remove();});}
+})();
+</script>
+
 </body></html>

@@ -20,16 +20,17 @@
     .button{display:inline-flex;padding:12px 18px;border:1px solid var(--red);background:var(--red);color:#fff;text-decoration:none;font-weight:750;border-radius:5px}.button.secondary{background:transparent;border-color:#454550}
     section{padding:76px 0}section.alt{background:#0e0e13;border-block:1px solid var(--line)}.section-head{max-width:700px;margin-bottom:30px}h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.035em;line-height:1.1;margin:8px 0 14px}p{margin:0 0 14px}.muted{color:var(--muted)}
     .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{padding:25px;background:var(--panel);border:1px solid var(--line);border-radius:8px}.card .num{color:var(--red);font-weight:900;letter-spacing:.08em;font-size:.85rem}.card h3{margin:10px 0;font-size:1.2rem}.card p{color:var(--muted);font-size:.96rem}
+    .videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.video-card{min-width:0;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:8px}.video-card h3{font-size:1.1rem;line-height:1.35;margin:4px 0 14px}.video-card video{display:block;width:100%;aspect-ratio:16/9;background:#000;border-radius:5px}.video-card p{margin:12px 0 0;color:var(--muted);font-size:.92rem}
     .split{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start}.list{padding:0;list-style:none}.list li{padding:12px 0;border-bottom:1px solid var(--line)}.list li:before{content:"/";color:var(--red);font-weight:900;margin-right:12px}
     .notice{border-left:3px solid var(--red);padding:16px 20px;background:#121217;color:#c8c8d0}.contactbox{padding:30px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(140deg,#15151c,#0d0d11)}
     footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:#ddd}
-    @media(max-width:760px){nav{align-items:flex-start;padding:18px 0;flex-direction:column}.grid,.split{grid-template-columns:1fr}.hero{padding:72px 0 62px}section{padding:58px 0}.wrap{width:min(var(--max),calc(100% - 30px))}}
+    @media(max-width:760px){nav{align-items:flex-start;padding:18px 0;flex-direction:column}.grid,.split,.videos{grid-template-columns:1fr}.hero{padding:72px 0 62px}section{padding:58px 0}.wrap{width:min(var(--max),calc(100% - 30px))}}
   </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Hauptnavigation">
   <a class="brand" href="#start">PUCHA<span>|</span>DEV</a>
-  <div class="links"><a href="strategie.html">Strategie</a><a href="#leistungen">Leistungen</a><a href="#ablauf">Arbeitsweise</a><a href="#kontakt">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+  <div class="links"><a href="strategie.html">Strategie</a><a href="#leistungen">Leistungen</a><a href="#videos">Videos</a><a href="#ablauf">Arbeitsweise</a><a href="#kontakt">Kontakt</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
 </nav></header>
 <main>
   <section class="hero" id="start"><div class="wrap">
@@ -37,6 +38,13 @@
     <h1>Digitale Spuren verstehen.<br><em>Handlungsfähig</em> bleiben.</h1>
     <p class="lead">PUCHA|DEV unterstützt Privatpersonen und Organisationen bei digitaler Sicherheit, OSINT-Recherche, strukturierter Beweissicherung und Prävention bei Cyberstalking und digitaler Belästigung.</p>
     <div class="actions"><a class="button" href="#kontakt">Anfrage stellen</a><a class="button secondary" href="#leistungen">Leistungen ansehen</a></div>
+  </div></section>
+  <section class="alt" id="videos"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">PUCHA|DEV in bewegten Bildern</div><h2>Aufklärung. Schutz. Handlungssicherheit.</h2><p class="muted">Zwei Kurzvideos stellen die Themen digitale Sicherheit, Cyberstalking und Beweissicherung vor.</p></div>
+    <div class="videos">
+      <article class="video-card"><h3>Dein Schutz. Deine Stimme. Deine Sicherheit.</h3><video controls preload="metadata" playsinline aria-label="PUCHA DEV – Dein Schutz. Deine Stimme. Deine Sicherheit."><source src="assets/videos/PUCHA_DEV%20%E2%80%93%20Dein%20Schutz.%20Deine%20Stimme.%20Deine%20Sicherheit._720p_caption.mp4" type="video/mp4">Dein Browser unterstützt das Videoelement nicht. <a href="assets/videos/PUCHA_DEV%20%E2%80%93%20Dein%20Schutz.%20Deine%20Stimme.%20Deine%20Sicherheit._720p_caption.mp4">Video öffnen</a>.</video><p>Digitale Sicherheit und Prävention verständlich erklärt.</p></article>
+      <article class="video-card"><h3>Cyberstalking: Aufklärung & Beweissicherung</h3><video controls preload="metadata" playsinline aria-label="PUCHA DEV – Cyberstalking Aufklärung und Beweissicherung"><source src="assets/videos/Pucha_Dev%20%E2%80%93%20Cyberstalking%20Aufkl%C3%A4rung%20%26%20Beweissicherung_720p_caption.mp4" type="video/mp4">Dein Browser unterstützt das Videoelement nicht. <a href="assets/videos/Pucha_Dev%20%E2%80%93%20Cyberstalking%20Aufkl%C3%A4rung%20%26%20Beweissicherung_720p_caption.mp4">Video öffnen</a>.</video><p>Hinweise zum Umgang mit digitaler Belästigung und zur strukturierten Dokumentation.</p></article>
+    </div>
   </div></section>
   <section id="leistungen"><div class="wrap">
     <div class="section-head"><div class="eyebrow">Leistungsbereiche</div><h2>Technische Klarheit statt Aktionismus.</h2><p class="muted">Strukturiert, nachvollziehbar und mit Blick auf Datenschutz und sichere nächste Schritte.</p></div>

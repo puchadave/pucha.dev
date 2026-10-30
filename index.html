@@ -31,7 +31,7 @@
     {"@type":"AdministrativeArea","name":"Märkischer Kreis"},
     {"@type":"AdministrativeArea","name":"Nordrhein-Westfalen"}
   ],
-  "email": "David.Puchalla@web.de",
+  "email": "David.puchalla@web.de",
   "telephone": "+49 1579 0428058",
   "sameAs": ["https://www.facebook.com/pucha.dev"],
   "knowsAbout": ["IT-Beratung","OSINT","Digitale Sicherheit","Cyberstalking-Prävention","Online-Marketing","Social-Media-Management","Markenentwicklung","Beschaffungslogistik"]
@@ -99,7 +99,7 @@ form{display:grid;gap:9px;margin-top:16px}label{font-weight:700;font-size:.92rem
 </div></section>
 <section id="kontakt"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Kontakt</div><h2>Ein Anliegen? Wir klären den nächsten Schritt.</h2><p class="muted">Beschreibe kurz, worum es geht. Bitte sende zunächst keine Passwörter, Zugangsdaten oder unnötigen sensiblen Informationen.</p></div>
-<div class="contactbox"><h3>PUCHA|DEV · David Puchalla</h3><p><strong>Telefon:</strong> <a href="tel:+4915790428058">+49 1579 0428058</a></p><p><strong>E-Mail:</strong> <a href="mailto:David.Puchalla@web.de">David.Puchalla@web.de</a></p><p><strong>WhatsApp:</strong> <a href="https://wa.me/4915790428058?text=Hallo%20David%2C%20ich%20habe%20eine%20Anfrage%20zu%20PUCHA%7CDEV." target="_blank" rel="noopener noreferrer">Nachricht senden</a></p><p class="muted">Keine Notruf- oder Einsatzstelle. Bei akuter Gefahr bitte 110 oder 112 wählen.</p></div>
+<div class="contactbox"><h3>PUCHA|DEV · David Puchalla</h3><p><strong>Telefon:</strong> <a href="tel:+4915790428058">+49 1579 0428058</a></p><p><strong>E-Mail:</strong> <a href="mailto:David.puchalla@web.de">David.puchalla@web.de</a></p><p><strong>WhatsApp:</strong> <a href="https://wa.me/4915790428058?text=Hallo%20David%2C%20ich%20habe%20eine%20Anfrage%20zu%20PUCHA%7CDEV." target="_blank" rel="noopener noreferrer">Nachricht senden</a></p><p class="muted">Keine Notruf- oder Einsatzstelle. Bei akuter Gefahr bitte 110 oder 112 wählen.</p></div>
 
 <div class="grid" style="margin-top:18px">
 <div class="contactbox" id="newsletter"><div class="eyebrow">Regional Intelligence · Newsletter</div><h3>Cyberlage-Updates aus der Region</h3><p class="muted">Erhalte redaktionelle Updates zu bestätigten Sicherheitsmeldungen, regionalen Entwicklungen und Präventionsmaßnahmen. Die Anmeldung wird per E-Mail angefragt; es gibt derzeit keinen automatischen Versanddienst.</p>
@@ -118,9 +118,9 @@ form{display:grid;gap:9px;margin-top:16px}label{font-weight:700;font-size:.92rem
 (function(){
   function mailto(to,subject,body){return 'mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);}
   var newsletter=document.getElementById('newsletter-form');
-  if(newsletter){newsletter.addEventListener('submit',function(e){e.preventDefault();var email=document.getElementById('newsletter-email').value;var consent=document.getElementById('newsletter-consent').checked;if(!consent)return;var body='Hiermit bitte ich um Aufnahme in den PUCHA|DEV-Newsletter.\nE-Mail-Adresse: '+email+'\nIch willige freiwillig in den Erhalt des Newsletters ein. Bitte senden Sie mir eine Bestätigung mit Informationen zum Widerruf.';window.location.href=mailto('David.Puchalla@web.de','Newsletter-Anmeldung PUCHA|DEV',body);});}
+  if(newsletter){newsletter.addEventListener('submit',function(e){e.preventDefault();var email=document.getElementById('newsletter-email').value;var consent=document.getElementById('newsletter-consent').checked;if(!consent)return;var body='Hiermit bitte ich um Aufnahme in den PUCHA|DEV-Newsletter.\nE-Mail-Adresse: '+email+'\nIch willige freiwillig in den Erhalt des Newsletters ein. Bitte senden Sie mir eine Bestätigung mit Informationen zum Widerruf.';window.location.href=mailto('David.puchalla@web.de','Newsletter-Anmeldung PUCHA|DEV',body);});}
   var contact=document.getElementById('contact-form');
-  if(contact){contact.addEventListener('submit',function(e){e.preventDefault();var name=document.getElementById('contact-name').value;var email=document.getElementById('contact-email').value;var topic=document.getElementById('contact-topic').value;var message=document.getElementById('contact-message').value;var body='Name: '+name+'\nE-Mail: '+email+'\nThema: '+topic+'\n\nNachricht:\n'+message;window.location.href=mailto('David.Puchalla@web.de','Kontaktanfrage PUCHA|DEV: '+topic,body);});}
+  if(contact){contact.addEventListener('submit',function(e){e.preventDefault();var name=document.getElementById('contact-name').value;var email=document.getElementById('contact-email').value;var topic=document.getElementById('contact-topic').value;var message=document.getElementById('contact-message').value;var body='Name: '+name+'\nE-Mail: '+email+'\nThema: '+topic+'\n\nNachricht:\n'+message;window.location.href=mailto('David.puchalla@web.de','Kontaktanfrage PUCHA|DEV: '+topic,body);});}
 })();
 </script>
 </body></html>

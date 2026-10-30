@@ -27,6 +27,12 @@
     @media(max-width:760px){nav{align-items:flex-start;padding:18px 0;flex-direction:column}.grid,.split,.videos{grid-template-columns:1fr}.hero{padding:72px 0 62px}section{padding:58px 0}.wrap{width:min(var(--max),calc(100% - 30px))}}
   .urgent-contact{position:fixed;z-index:1000;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px max(18px,calc((100vw - 1120px)/2));background:#ff1b2d;color:#fff;box-shadow:0 -5px 24px rgba(0,0,0,.38);font:600 15px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif}.urgent-contact span{display:flex;flex-direction:column;gap:3px}.urgent-contact small{font-size:11px;font-weight:500;opacity:.95}.urgent-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.urgent-contact a{color:#fff;font-weight:900;white-space:nowrap;text-decoration:none;border:1px solid rgba(255,255,255,.75);border-radius:5px;padding:9px 12px}.urgent-contact a.whatsapp{background:#128c4a;border-color:#128c4a}.urgent-contact a.facebook{background:#1877f2;border-color:#1877f2}.urgent-contact a:focus-visible{outline:3px solid #fff;outline-offset:3px}body{padding-bottom:78px}@media(max-width:520px){.urgent-contact{padding:10px 12px;gap:8px}.urgent-contact small{font-size:10px}.urgent-contact a{font-size:13px;padding:9px 9px}.urgent-actions{gap:6px}}
     .insurance-card{padding:30px;border:1px solid #3a2529;border-left:4px solid var(--red);border-radius:8px;background:radial-gradient(ellipse at 100% 0,rgba(255,27,45,.12),transparent 48%),var(--panel)}.insurance-card h3{font-size:1.35rem;margin:8px 0 12px}.insurance-card p{color:#c8c8d0}.insurance-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}.insurance-points div{padding:15px;background:#0b0b10;border:1px solid var(--line);border-radius:6px}.insurance-points strong{display:block;color:#fff;margin-bottom:5px}.insurance-points span{font-size:.92rem;color:var(--muted)}@media(max-width:760px){.insurance-points{grid-template-columns:1fr}}
+
+/* Cookie-Info: rein informativ, da derzeit keine einwilligungspflichtigen Cookies eingesetzt werden */
+.cookie-info{position:fixed;z-index:1100;left:50%;bottom:calc(82px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(900px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 16px;background:#17171d;color:#f4f4f6;border:1px solid #555560;border-left:4px solid #ff1b2d;border-radius:9px;box-shadow:0 8px 32px rgba(0,0,0,.48);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.cookie-info p{margin:0;flex:1}.cookie-info a{color:#ff8790;text-decoration:underline}.cookie-info button{flex-shrink:0;background:#ff1b2d;color:#fff;border:0;border-radius:5px;padding:9px 14px;font:700 13px system-ui;cursor:pointer}.cookie-info button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:620px){.cookie-info{bottom:calc(88px + env(safe-area-inset-bottom));align-items:flex-start;gap:10px;padding:11px 12px;font-size:12px}.cookie-info button{padding:8px 10px;font-size:12px}}
+
 </style>
 </head>
 <body>
@@ -97,4 +103,17 @@
 </main>
 <footer><div class="wrap foot"><span>© <span id="year">2026</span> PUCHA|DEV</span><span>Digitale Sicherheit. Klare Beweise.</span><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div></footer>
 <aside class="urgent-contact" aria-label="Direkter telefonischer Kontakt"><span><strong>PUCHA|DEV · Direktkontakt</strong><small>Keine amtliche Notrufstelle. Bei akuter Gefahr: 110 oder 112.</small></span><div class="urgent-actions"><a href="tel:+4915790428058">Anrufen</a><a class="whatsapp" href="https://wa.me/4915790428058?text=Hallo%20David%2C%20ich%20habe%20eine%20Anfrage%20zu%20PUCHA%7CDEV." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp-Nachricht an PUCHA DEV senden">WhatsApp</a><a class="facebook" href="https://www.facebook.com/pucha.dev" target="_blank" rel="noopener noreferrer" aria-label="Facebook-Seite von PUCHA DEV öffnen">Facebook</a></div></aside>
+
+<aside class="cookie-info" id="cookie-info" role="note" aria-label="Cookie-Information">
+  <p><strong>Cookie-Info:</strong> Diese Website verwendet nach aktuellem technischem Stand keine eigenen Cookies, Tracking- oder Analyse-Dienste und bindet keine externen Inhalte ein. Externe Dienste wie Facebook oder WhatsApp werden erst durch Anklicken eines Links aufgerufen. <a href="datenschutz.html#cookies">Weitere Informationen</a>.</p>
+  <button type="button" id="cookie-info-close" aria-label="Cookie-Hinweis schließen">Schließen</button>
+</aside>
+<script>
+(function(){
+  var closeButton=document.getElementById('cookie-info-close');
+  var notice=document.getElementById('cookie-info');
+  if(closeButton&&notice){closeButton.addEventListener('click',function(){notice.remove();});}
+})();
+</script>
+
 </body></html>

@@ -4,34 +4,82 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0a0a0d">
-<title>Tarifcheck Tarifvergleich | PUCHA|DEV</title>
-<meta name="description" content="Tarifangebote über Tarifcheck aufrufen und Konditionen vergleichen. Ein externer Partnerlink von PUCHA|DEV.">
+<title>Versicherungen &amp; Tarife vergleichen | PUCHA|DEV</title>
+<meta name="description" content="Versicherungen, Finanzen, Energie, DSL und weitere Tarife vergleichen. PUCHA|DEV stellt geprüfte Affiliate-Einstiege zu CHECK24/Tarifcheck bereit.">
 <link rel="canonical" href="https://pucha.dev/tarifvergleich/">
 <meta name="robots" content="index,follow">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="PUCHA|DEV">
-<meta property="og:title" content="Tarife vergleichen | PUCHA|DEV">
-<meta property="og:description" content="Externer Tarifvergleich über Tarifcheck. Angebote und Konditionen direkt beim Anbieter prüfen.">
+<meta property="og:title" content="Versicherungen &amp; Tarife vergleichen | PUCHA|DEV">
+<meta property="og:description" content="Versicherungen, Finanzen, Energie, DSL und weitere Tarife vergleichen.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pucha.dev/tarifvergleich/">
 <style>
-:root{color-scheme:dark;--bg:#0a0a0d;--panel:#14141b;--text:#f4f4f6;--muted:#b8b8c2;--red:#ff1b2d;--line:#303039}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.wrap{width:min(960px,calc(100% - 36px));margin:auto}
+:root{color-scheme:dark;--bg:#0a0a0d;--panel:#14141b;--panel2:#181820;--text:#f4f4f6;--muted:#b8b8c2;--red:#ff1b2d;--line:#303039;--green:#35c987}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
 header{border-bottom:1px solid var(--line);padding:18px 0}.nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.brand{font-weight:950;letter-spacing:.06em;text-decoration:none;font-size:1.2rem}.brand span,.eyebrow{color:var(--red)}.navlinks{display:flex;gap:18px;flex-wrap:wrap}.navlinks a{color:var(--muted);text-decoration:none;font-size:.92rem}
-.hero{padding:76px 0 48px;background:radial-gradient(ellipse at 80% 5%,rgba(255,27,45,.16),transparent 48%)}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.76rem;font-weight:850}h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.04;letter-spacing:-.05em;margin:14px 0 20px;max-width:850px}h1 span{color:var(--red)}.lead{font-size:1.14rem;color:#d0d0d7;max-width:760px}
-.panel{padding:clamp(22px,5vw,38px);background:var(--panel);border:1px solid var(--line);border-radius:10px;margin:16px 0 30px}.panel h2{font-size:1.5rem;line-height:1.2;margin:0 0 10px}.panel p{color:var(--muted);margin:0 0 20px}.button{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid var(--red);border-radius:5px;background:var(--red);color:#fff;text-decoration:none;font-weight:850}.button:hover{filter:brightness(1.1)}.disclosure{border-left:4px solid var(--red);background:#171218;padding:18px 20px;border-radius:5px;margin:24px 0;color:#d9d5d9}.disclosure p{margin:6px 0}.checklist{padding-left:20px;color:#d0d0d7}.checklist li{margin:7px 0}.muted{color:var(--muted)}footer{border-top:1px solid var(--line);padding:24px 0 50px;color:var(--muted);font-size:.9rem}footer a{color:#ddd}
-@media(max-width:620px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.hero{padding:54px 0 34px}.button{width:100%}}
+.hero{padding:76px 0 48px;background:radial-gradient(ellipse at 80% 5%,rgba(255,27,45,.16),transparent 48%)}.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.76rem;font-weight:850}h1{font-size:clamp(2.5rem,7vw,4.7rem);line-height:1.04;letter-spacing:-.05em;margin:14px 0 20px;max-width:900px}h1 span{color:var(--red)}.lead{font-size:1.14rem;color:#d0d0d7;max-width:820px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0 34px}.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;min-height:250px}.card.top{border-color:#55505a;box-shadow:0 0 0 1px rgba(255,27,45,.08)}.tag{display:inline-block;width:max-content;color:#fff;background:#25252d;border:1px solid #393943;border-radius:999px;padding:3px 9px;font-size:.72rem;font-weight:800}.card h2{font-size:1.35rem;line-height:1.15;margin:13px 0 8px}.card p{color:var(--muted);margin:0 0 14px}.commission{font-weight:900;color:#fff;margin:4px 0 14px}.commission span{color:var(--green)}.button{display:inline-flex;align-items:center;justify-content:center;margin-top:auto;padding:12px 17px;border:1px solid var(--red);border-radius:5px;background:var(--red);color:#fff;text-decoration:none;font-weight:850}.button.secondary{background:transparent;color:#fff;border-color:#55555e}.button:hover{filter:brightness(1.1)}
+.panel{padding:clamp(22px,5vw,38px);background:var(--panel);border:1px solid var(--line);border-radius:10px;margin:16px 0 30px}.panel h2{font-size:1.5rem;line-height:1.2;margin:0 0 10px}.panel p{color:var(--muted);margin:0 0 16px}.disclosure{border-left:4px solid var(--red);background:#171218;padding:18px 20px;border-radius:5px;margin:24px 0;color:#d9d5d9}.disclosure p{margin:6px 0}.checklist{padding-left:20px;color:#d0d0d7}.checklist li{margin:7px 0}.muted{color:var(--muted)}footer{border-top:1px solid var(--line);padding:24px 0 50px;color:var(--muted);font-size:.9rem}footer a{color:#ddd}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.nav{align-items:flex-start;flex-direction:column}.navlinks{gap:12px}.hero{padding:54px 0 34px}.grid{grid-template-columns:1fr}.button{width:100%}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/">PUCHA<span>|</span>DEV</a><nav class="navlinks" aria-label="Navigation"><a href="/">Startseite</a><a href="/cyberversicherung.html">Cyberversicherung</a><a href="/#kontakt">Kontakt</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="/">PUCHA<span>|</span>DEV</a><nav class="navlinks" aria-label="Navigation"><a href="/">Startseite</a><a href="/cyberversicherung.html">Cyberversicherung</a><a href="/anbieter/">Versicherungen</a><a href="/#kontakt">Kontakt</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap"><div class="eyebrow">PUCHA|DEV · Externer Tarifvergleich</div><h1>Tarife prüfen.<br><span>Konditionen vergleichen.</span></h1><p class="lead">Über den folgenden Link gelangst du zum Vergleichsangebot von Tarifcheck. Prüfe dort die verfügbaren Produkte, Leistungen, Preise und Vertragsbedingungen direkt beim Anbieter.</p></div></section>
+<section class="hero"><div class="wrap"><div class="eyebrow">PUCHA|DEV · Affiliate &amp; Tarifvergleich</div><h1>Schutz vergleichen.<br><span>Kosten optimieren.</span></h1><p class="lead">Hier bündelt PUCHA|DEV aktuelle Vergleichsangebote aus Versicherungen, Finanzen, Energie, Internet und Mobilfunk. Der eigentliche Vergleich und Vertragsabschluss erfolgen beim jeweiligen externen Anbieter.</p></div></section>
+
 <section class="wrap">
-<div class="panel"><h2>Tarifvergleich bei Tarifcheck starten</h2><p>Der Vergleich und eine mögliche Anfrage oder ein Vertragsabschluss erfolgen auf der externen Website von Tarifcheck beziehungsweise den dort eingebundenen Anbietern.</p><a class="button" href="https://a.partner-versicherung.de/click.php?partner_id=152772&amp;ad_id=18&amp;tracking=test123" target="_blank" rel="sponsored nofollow noopener noreferrer" aria-label="Tarifvergleich bei Tarifcheck in neuem Fenster öffnen">Jetzt Tarifvergleich öffnen <span aria-hidden="true">&nbsp;↗</span></a></div>
-<div class="disclosure"><strong>Werbung / Affiliate-Hinweis</strong><p>Diese Seite enthält einen Partnerlink. Wenn über diesen Link eine vom Partnerprogramm vergütete Aktion zustande kommt, kann PUCHA|DEV eine Provision erhalten. Für dich entstehen dadurch grundsätzlich keine zusätzlichen Kosten.</p><p>Die Partnerkennung im Link lautet 152772. Die im Link enthaltene Tracking-Kennung ist derzeit „test123“. Ob diese Kennung für die produktive Provisionszuordnung freigeschaltet ist, muss im Tarifcheck-Partnerkonto bestätigt werden.</p></div>
-<h2>Vor einer Entscheidung prüfen</h2><ul class="checklist"><li>Leistungsumfang und Vertragsbedingungen vollständig lesen.</li><li>Selbstbeteiligungen, Ausschlüsse und Wartezeiten beachten.</li><li>Nicht nur den Preis, sondern auch die enthaltenen Leistungen vergleichen.</li><li>Angaben und Verfügbarkeit direkt beim jeweiligen Anbieter verifizieren.</li></ul>
-<p class="muted">PUCHA|DEV ist keine Versicherungsgesellschaft. Die Seite stellt keine individuelle Versicherungs- oder Finanzberatung dar. Produktinformationen, Vergleichsrechner und Vertragsabschlüsse werden vom externen Anbieter bereitgestellt.</p>
+<div class="panel">
+<h2>Aktuelles Highlight: Kfz-Versicherung</h2>
+<p>Die aktuelle Kfz-Hauptsaison läuft bis 30. November 2026. Tarifcheck nennt derzeit 70 € Provision je vermitteltem Kfz-Abschluss und bewirbt über 330 Vergleichstarife. Für Besucher ist der Vergleich kostenlos und ohne Registrierung möglich.</p>
+<a class="button" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15&amp;deep=kfz-versicherung" target="_blank" rel="sponsored nofollow noopener noreferrer">Kfz-Vergleich starten ↗</a>
+</div>
+
+<div class="eyebrow">Versicherungen</div>
+<div class="grid">
+<article class="card top"><span class="tag">70 € / Sale</span><h2>Kfz-Versicherung</h2><p>Haftpflicht, Teilkasko und Vollkasko im Vergleich. Besonders relevant vor dem 30. November.</p><div class="commission">Provision: <span>70,00 €</span></div><a class="button" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15&amp;deep=kfz-versicherung" target="_blank" rel="sponsored nofollow noopener noreferrer">Jetzt vergleichen</a></article>
+<article class="card"><span class="tag">50 € / Sale</span><h2>Rechtsschutz</h2><p>Vergleich von Rechtsschutz-Tarifen für private Risiken. Vertragsbedingungen und Leistungsumfang direkt beim Anbieter prüfen.</p><div class="commission">Provision: <span>50,00 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">50 € / Sale</span><h2>Unfallversicherung</h2><p>Privater Unfallschutz mit verschiedenen Leistungsmodellen. Vor Abschluss Invaliditätsleistung und Ausschlüsse vergleichen.</p><div class="commission">Provision: <span>50,00 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">bis 67,50 € / Lead</span><h2>Private Krankenversicherung</h2><p>Tarifvergleich für private Krankenvollversicherung. Die konkrete Eignung hängt von persönlichen und rechtlichen Voraussetzungen ab.</p><div class="commission">Provision: <span>bis 67,50 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">30 € / Sale</span><h2>Hausrat</h2><p>Vergleich von Hausratversicherungen für unterschiedliche Wohnsituationen und Leistungsumfänge.</p><div class="commission">Provision: <span>30,00 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">16,50 € / Sale</span><h2>Private Haftpflicht</h2><p>Grundlegender Schutz vor berechtigten Schadensersatzansprüchen Dritter. Deckungssumme und Ausschlüsse vergleichen.</p><div class="commission">Provision: <span>16,50 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">75 € / Sale</span><h2>Wohngebäude</h2><p>Vergleich für Eigentümer von Wohngebäuden. Elementarrisiken, Selbstbehalt und Deckung prüfen.</p><div class="commission">Provision: <span>75,00 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">25 € / Sale</span><h2>Hundekrankenversicherung</h2><p>Vergleich von Tierkrankenversicherungen für Hunde. Leistungsgrenzen und GOT-Erstattung besonders prüfen.</p><div class="commission">Provision: <span>25,00 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+</div>
+
+<div class="eyebrow">Finanzen &amp; Versorgung</div>
+<div class="grid">
+<article class="card"><span class="tag">40 € / Sale</span><h2>Girokonto</h2><p>Vergleich von Girokonten und aktuellen Neukundenangeboten.</p><div class="commission">Provision: <span>40,00 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">40 € / Sale</span><h2>Kreditkarte</h2><p>Vergleich verschiedener Kreditkartenmodelle und Konditionen.</p><div class="commission">Provision: <span>40,00 €</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">1,75 %</span><h2>Kredit</h2><p>Kreditvergleich mit erfolgsabhängiger Vergütung. Effektiven Jahreszins und Gesamtkosten prüfen.</p><div class="commission">Provision: <span>1,75 % der Kreditsumme</span></div><a class="button secondary" href="https://a.partner-versicherung.de/click.php?partner_id=1180688&amp;ad_id=15" target="_blank" rel="sponsored nofollow noopener noreferrer">Vergleich öffnen</a></article>
+<article class="card"><span class="tag">20 € / Lead</span><h2>Strom</h2><p>Stromtarife vergleichen und Wechselmöglichkeiten prüfen.</p><div class="commission">Provision: <span>20,00 € stornofrei</span></div><a class="button secondary" href="https://a.check24.net/misc/click.php?pid=1180688&amp;aid=18&amp;deep=stromanbieter-wechseln&amp;cat=1" target="_blank" rel="sponsored nofollow noopener noreferrer">Stromvergleich öffnen</a></article>
+<article class="card"><span class="tag">20 € / Lead</span><h2>Gas</h2><p>Gastarife vergleichen und Wechselmöglichkeiten prüfen.</p><div class="commission">Provision: <span>20,00 € stornofrei</span></div><a class="button secondary" href="https://a.check24.net/misc/click.php?pid=1180688&amp;aid=18&amp;deep=gasanbieter-wechseln&amp;cat=3" target="_blank" rel="sponsored nofollow noopener noreferrer">Gasvergleich öffnen</a></article>
+<article class="card"><span class="tag">bis 72,50 € / Sale</span><h2>DSL &amp; Internet</h2><p>Internetangebote verschiedener Anbieter vergleichen und Verfügbarkeit prüfen.</p><div class="commission">Provision: <span>bis 72,50 €</span></div><a class="button secondary" href="https://a.check24.net/misc/click.php?pid=1180688&amp;aid=18&amp;deep=dsl-anbieterwechsel&amp;cat=4" target="_blank" rel="sponsored nofollow noopener noreferrer">DSL-Vergleich öffnen</a></article>
+</div>
+
+<div class="panel">
+<h2>Weitere Produkte</h2>
+<p>CHECK24 führt darüber hinaus Mobilfunk, Reisen, Mietwagen und weitere Finanz- und Versicherungsprodukte. Das Partnerprogramm stellt dafür Werbemittel, Deeplinks und Vergleichsrechner bereit.</p>
+<a class="button secondary" href="https://www.check24-partnerprogramm.de/werbemittel/" target="_blank" rel="nofollow noopener noreferrer">CHECK24-Werbemittel öffnen ↗</a>
+</div>
+
+<div class="disclosure">
+<strong>Werbung / Affiliate-Hinweis</strong>
+<p>Diese Seite enthält Affiliate-Links. Wenn über einen solchen Link eine vergütete Aktion zustande kommt, kann PUCHA|DEV eine Provision erhalten. Für Nutzer entstehen dadurch grundsätzlich keine zusätzlichen Kosten.</p>
+<p>Die Provisionswerte sind die aktuell öffentlich ausgewiesenen Partnerprogramm-Werte und können sich ändern. Maßgeblich sind die jeweils aktuellen Teilnahme- und Produktbedingungen des Partnerprogramms.</p>
+<p>Bei den nicht produkt-spezifisch tief verlinkten Angeboten führt der Affiliate-Link zum Vergleichsportal; der konkrete Produktvergleich wird anschließend beim Anbieter ausgewählt. Die technische Zuordnung erfolgt über die Partnerkennung.</p>
+</div>
+
+<h2>Vor einer Entscheidung prüfen</h2>
+<ul class="checklist">
+<li>Leistungsumfang, Ausschlüsse, Wartezeiten und Selbstbehalte vollständig lesen.</li>
+<li>Bestehende Verträge auf Doppelversicherungen prüfen.</li>
+<li>Bei Finanzprodukten effektiven Jahreszins und Gesamtkosten vergleichen.</li>
+<li>Bei Versicherungen nicht nur den Beitrag, sondern Deckungssumme und Bedingungen bewerten.</li>
+<li>Produktinformationen und Vertragsabschluss erfolgen beim externen Anbieter.</li>
+</ul>
+<p class="muted">PUCHA|DEV ist keine Versicherungsgesellschaft, kein Versicherer und keine Bank. Diese Seite stellt keine individuelle Versicherungs-, Rechts- oder Finanzberatung dar.</p>
 </section>
 </main>
 <footer><div class="wrap">© 2026 PUCHA|DEV · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></div></footer>
